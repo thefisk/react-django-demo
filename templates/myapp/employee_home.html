@@ -1,0 +1,7 @@
+{% extends "myapp/base_template.html" %}
+{% block content %}
+  <div id="js-framework-home"></div>
+  <!-- making the department_choices variable avialable in the DOM -->
+  {{ department_choices|json_script:'department-choices' }}
+  <script src="{% static 'js-bundle.js' %}"></script>
+{% endblock content %}
